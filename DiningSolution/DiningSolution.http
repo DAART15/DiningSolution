@@ -1,0 +1,6 @@
+@DiningSolution_HostAddress = http://localhost:5091
+
+GET {{DiningSolution_HostAddress}}/diningsoliution/
+Accept: application/json
+
+###
