@@ -1,6 +1,7 @@
 ﻿using DiningSolution.Domain.Errors;
 using DiningSolution.Domain.Primitives;
 using DiningSolution.Domain.Shared;
+using DiningSolution.Domain.Constants;
 
 namespace DiningSolution.Domain.ValueObjects
 {
@@ -14,7 +15,7 @@ namespace DiningSolution.Domain.ValueObjects
             {
                 return Result<PersonnelName>.Failure(DomainErrors.PersonnelNameEmty);
             }
-            if(value.Length > 50)//<<< contant padaryti
+            if(value.Length > DomainConstants.PersonnelNameMaxLength)
             {
                 return Result<PersonnelName>.Failure(DomainErrors.PersonnelNameToLong);
             }
