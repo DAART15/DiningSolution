@@ -13,13 +13,13 @@ namespace DiningSolution.Domain.ValueObjects
         {
             if (string.IsNullOrWhiteSpace(value))
             {
-                return Result<PersonnelPosition>.Failure(DomainErrors.PersonnelPositionEmpty);
+                return Result.Failure<PersonnelPosition>(DomainErrors.PersonnelPositionEmpty);
             }
             if(value != DomainConstants.Waiter || value != DomainConstants.Administration)
             {
-                return Result<PersonnelPosition>.Failure(DomainErrors.PersonnelPositionIllegal);
+                return Result.Failure<PersonnelPosition>(DomainErrors.PersonnelPositionIllegal);
             }
-            return Result<PersonnelPosition>.Success(new PersonnelPosition(value));
+            return new PersonnelPosition(value);
         }
         public override IEnumerable<object> GetAtomicValues()
         {

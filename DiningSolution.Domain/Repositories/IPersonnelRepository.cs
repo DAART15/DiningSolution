@@ -3,7 +3,7 @@ using DiningSolution.Domain.ValueObjects;
 
 namespace DiningSolution.Domain.Repositories
 {
-    internal interface IPersonnelRepository
+    public interface IPersonnelRepository
     {
         Task AddAsync(Personnel personnel);
         Task<Personnel> GetAsync(PersonnelID personnelID);

@@ -13,13 +13,13 @@ namespace DiningSolution.Domain.ValueObjects
         {
             if (string.IsNullOrWhiteSpace(value))
             {
-                return Result<PersonnelName>.Failure(DomainErrors.PersonnelNameEmty);
+                return Result.Failure<PersonnelName>(DomainErrors.PersonnelNameEmty);
             }
             if(value.Length > DomainConstants.PersonnelNameMaxLength)
             {
-                return Result<PersonnelName>.Failure(DomainErrors.PersonnelNameToLong);
+                return Result.Failure<PersonnelName>(DomainErrors.PersonnelNameToLong);
             }
-            return Result<PersonnelName>.Success( new PersonnelName(value));
+            return new PersonnelName(value);
         }
         public override IEnumerable<object> GetAtomicValues()
         {

@@ -14,7 +14,7 @@ namespace DiningSolution.Domain.ValueObjects
             var value1 = random.Next(DomainConstants.PersonnelIDFirstTwoDigitsStart, DomainConstants.PersonnelIDFirstTwoDigitsFinish);
             var value2 = random.Next(DomainConstants.PersonnelIDLastThreeDigitsStart, DomainConstants.PersonnelIDLastThreeDigitsFinish);
             var stringValue = value1.ToString() + value2.ToString();
-            return Result<PersonnelID>.Success(new PersonnelID(int.Parse(stringValue)));
+            return new PersonnelID(int.Parse(stringValue));
         }
 
         public override IEnumerable<object> GetAtomicValues()

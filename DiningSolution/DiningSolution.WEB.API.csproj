@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\DiningSolution.Application\DiningSolution.Application.csproj" />
+    <ProjectReference Include="..\DiningSolution.Infrastructure\DiningSolution.Infrastructure.csproj" />
+    <ProjectReference Include="..\DiningSolution.Persistance\DiningSolution.Persistance.csproj" />
   </ItemGroup>
 
 </Project>
