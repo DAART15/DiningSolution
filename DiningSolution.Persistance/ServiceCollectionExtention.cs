@@ -11,6 +11,7 @@ namespace DiningSolution.Persistance
         {
             //services.AddScoped<IPersonnelRepository, PersonnelRepository>();
             services.AddScoped<IPersonnelRepository, PersonnelTemporaryData>();
+
             return services;
         }
     }

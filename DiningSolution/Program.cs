@@ -1,3 +1,4 @@
+using DiningSolution.Application;
 using DiningSolution.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,7 +10,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//builder.Services.AddMediatR(); //typeof(CreatePersonnelCommand).Assembly
+
 builder.Services.AddPersistance();
+builder.Services.AddApplication();
 
 
 

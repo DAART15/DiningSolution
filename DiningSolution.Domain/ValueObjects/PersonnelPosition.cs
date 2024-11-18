@@ -15,10 +15,10 @@ namespace DiningSolution.Domain.ValueObjects
             {
                 return Result.Failure<PersonnelPosition>(DomainErrors.PersonnelPositionEmpty);
             }
-            if(value != DomainConstants.Waiter || value != DomainConstants.Administration)
+            if (value != DomainConstants.Waiter && value != DomainConstants.Administration)
             {
                 return Result.Failure<PersonnelPosition>(DomainErrors.PersonnelPositionIllegal);
-            }
+            }            
             return new PersonnelPosition(value);
         }
         public override IEnumerable<object> GetAtomicValues()
