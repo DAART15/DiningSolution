@@ -1,33 +1,18 @@
-using DiningSolution.Application;
-using DiningSolution.Persistance;
+using DiningSolution.WEB.API.StartupConfiguration;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-//builder.Services.AddMediatR(); //typeof(CreatePersonnelCommand).Assembly
-
-builder.Services.AddPersistance();
-builder.Services.AddApplication();
-
-
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+namespace DiningSolution.WEB.API
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+            var startup = new Startup(builder.Configuration);
+            startup.ConfigureServices(builder.Services);
+            var app = builder.Build();
+            startup.ConfigureCorsEnvironment(app, app.Environment);
+            app.MapControllers();
+            app.Run();
+        }
+    }
 }
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
