@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiningSolution.Persistance"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiningSolution.Infrastructure", "DiningSolution.Infrastructure\DiningSolution.Infrastructure.csproj", "{1A7F8ABE-C95E-4D33-BE0C-4A50F49CDB5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiningSolution.WPF", "DiningSolution.WPF\DiningSolution.WPF.csproj", "{B1D825F3-38F6-4CAB-9340-D93AE2CA0FAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{1A7F8ABE-C95E-4D33-BE0C-4A50F49CDB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A7F8ABE-C95E-4D33-BE0C-4A50F49CDB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A7F8ABE-C95E-4D33-BE0C-4A50F49CDB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D825F3-38F6-4CAB-9340-D93AE2CA0FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D825F3-38F6-4CAB-9340-D93AE2CA0FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D825F3-38F6-4CAB-9340-D93AE2CA0FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D825F3-38F6-4CAB-9340-D93AE2CA0FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{D58B931F-4D67-45B6-8042-D77030D52B86} = {ADC0054F-F2B9-4C8B-861F-D40E7AA7C40F}
 		{93E56012-36AC-4E00-A79E-6158699012E7} = {ADC0054F-F2B9-4C8B-861F-D40E7AA7C40F}
 		{1A7F8ABE-C95E-4D33-BE0C-4A50F49CDB5F} = {ADC0054F-F2B9-4C8B-861F-D40E7AA7C40F}
+		{B1D825F3-38F6-4CAB-9340-D93AE2CA0FAF} = {A0CBFE68-9BB7-42FA-86EB-D09B32C03083}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {657335A6-E87E-47A0-A865-0BFFE4E82654}
