@@ -7,13 +7,13 @@
         xmlns:views="clr-namespace:DiningSolution.WPF.Views"
         mc:Ignorable="d"
         WindowStyle="None"
-        Title="MainWindow" Height="768" Width="1024">
+        Height="768" Width="1024" 
+        Background="{StaticResource MainColor}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <!-- i apacia kolkas rodo infobar, bet reikia tikriti funkcionalumą kai atsiras daugiau funkcijų  -->
         <views:InfoBarView Grid.Row="0"/>
         
         <!-- Vietoje btn padaryti binding i kitus langus-->

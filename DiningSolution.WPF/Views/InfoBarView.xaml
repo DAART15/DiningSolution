@@ -4,15 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DiningSolution.WPF.Views"
+             xmlns:vm="clr-namespace:DiningSolution.WPF.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="1024" Background="{StaticResource InfoBarColor}">
+    <UserControl.DataContext>
+        <vm:InfoBarVM x:Name="infoBarVM"/>
+    </UserControl.DataContext>
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="0" Text="Info Bar" Style="{StaticResource InfoBarText}"/>
-        <Button Grid.Column="1" Content="X" 
+        <TextBlock Grid.Column="1" Text="{Binding Date}" Style="{StaticResource InfoBar_Clock}"/>
+        <TextBlock Grid.Column="2" Text="{Binding Time, Mode=TwoWay}" Style="{StaticResource InfoBar_Clock}"/>
+        
+        <Button Grid.Column="3" Content="X" 
                 Style="{StaticResource AppCloseButton}"
                 Command="{Binding CloseAppCommand}"/>
     </Grid>
