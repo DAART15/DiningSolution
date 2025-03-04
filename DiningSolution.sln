@@ -19,7 +19,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiningSolution.Persistance"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiningSolution.Infrastructure", "DiningSolution.Infrastructure\DiningSolution.Infrastructure.csproj", "{1A7F8ABE-C95E-4D33-BE0C-4A50F49CDB5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiningSolution.WPF", "DiningSolution.WPF\DiningSolution.WPF.csproj", "{B1D825F3-38F6-4CAB-9340-D93AE2CA0FAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiningSolution.WPF", "DiningSolution.WPF\DiningSolution.WPF.csproj", "{B1D825F3-38F6-4CAB-9340-D93AE2CA0FAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "A_ToDo_Tasks", "A_ToDo_Tasks", "{AE4CAA54-7D66-4C44-885A-284575B63A92}"
+	ProjectSection(SolutionItems) = preProject
+		ToDo_Tasks.cs = ToDo_Tasks.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
